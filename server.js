@@ -15,6 +15,18 @@ app.use(express.json());
 // In-memory game state (Note: This will reset on serverless function cold starts)
 const games = new Map();
 
+// Root route
+app.get('/', (req, res) => {
+    res.json({
+        status: 'TicTacToe Game Server is running',
+        endpoints: {
+            health: '/api/health',
+            createGame: '/api/games/create',
+            joinGame: '/api/games/join'
+        }
+    });
+});
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
     console.log('Health check endpoint called');
