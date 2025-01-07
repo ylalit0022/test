@@ -1,0 +1,17 @@
+{
+  "name": "tictactoe-server",
+  "version": "1.0.0",
+  "description": "TicTacToe game server",
+  "main": "server.js",
+  "engines":{
+	"node": "20.x"
+},	
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.7.2",
+    "cors": "^2.8.5"
+  }
+}
